@@ -8,10 +8,16 @@ public class GameManager : MonoBehaviour {
     private int level = 3;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        boardScript = GetComponent<BoardManager>();
+        InitGame();
 	}
 	
+    void InitGame()
+    {
+        boardScript.SetupScene(level);
+    }
 	// Update is called once per frame
 	void Update () {
 		
